@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Royal Palm Hotel - Home</title>
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="Home.html" class="active-link">Home</a></li>
+      <li><a href="Rooms.html">Rooms</a></li>
+      <li><a href="Services.html">Services</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to The Royal Palm Hotel</h1>
+      <p>Enjoy your stay in Cairo with comfort and great service.</p>
+      <a href="Contact.html" class="hero-button">Contact Hotel</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="container">
+      <div class="welcome-box">
+        <h2>Welcome</h2>
+        <p>
+          Enjoy comfortable rooms, friendly service, and a quiet stay in the
+          center of Cairo. We focus on clean spaces and a smooth experience.
+        </p>
+
+        <div class="stay-calculator">
+          <h3>Cost Calculator</h3>
+          <p class="calculator-note">Choose a room type and enter the number of nights.</p>
+
+          <div class="calculator-fields">
+            <div class="input-group">
+              <label for="nights">Nights</label>
+              <input type="number" id="nights" value="2" min="1" />
+            </div>
+
+            <div class="input-group">
+              <label for="roomType">Room Type</label>
+              <select id="roomType">
+                <option value="1200">Standard Room</option>
+                <option value="1500">Deluxe Room</option>
+                <option value="2000">Suite</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="calculateStayBtn" class="calculator-button">Calculate Total</button>
+          <p id="stayResult" class="calculator-result">Enter values and click calculate.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section services">
+    <div class="container">
+      <h2>Our Services</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Great Location</h3>
+          <p>Close to attractions and transport.</p>
+        </div>
+
+        <div class="card">
+          <h3>24/7 Support</h3>
+          <p>We are always ready to help.</p>
+        </div>
+
+        <div class="card">
+          <h3>Free Wi-Fi</h3>
+          <p>Fast internet in all areas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p><strong>The Royal Palm Hotel</strong></p>
+      <p>Phone: +20 100 000 0000 | Email: info@royalpalmhotel.com</p>
+      <p>&copy; 2026 The Royal Palm Hotel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var nightsInput = document.getElementById("nights");
+    var roomTypeSelect = document.getElementById("roomType");
+    var calculateButton = document.getElementById("calculateStayBtn");
+    var totalMessage = document.getElementById("stayResult");
+
+    calculateButton.onclick = function () {
+      var numberOfNights = Number(nightsInput.value);
+      var pricePerNight = Number(roomTypeSelect.value);
+
+      if (numberOfNights <= 0) {
+        totalMessage.innerHTML = "Enter valid numbers";
+        return;
+      }
+
+      var totalPrice = numberOfNights * pricePerNight;
+      totalMessage.innerHTML = "Total = " + totalPrice + " EGP";
+    };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #eef3fb;
+    color: #24334d;
+}
+
+
+.gallery {
+
+    background-color: #eef3fb;
+    padding: 40px 16px 60px;
+
+}
+
+.TheBigDiv {
+
+    border-left: 4px solid #c9a84c;
+    border-radius: 8px;
+    background-color: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+.hello {
+    font-family: Georgia;
+    padding: 20px 0 0 20px;
+}
+
+.hello1 {
+    font-family: Arial;
+    padding: 0 0 0 20px;
+    margin-bottom: 16px;
+}
+
+.Sdiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
+}
+
+.fig {
+    background-color: white;
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #c9a84c;
+}
+
+.text {
+    font-family: Arial;
+    font-size: 0.8rem;
+    padding: 10px;
+}
